@@ -1,0 +1,26 @@
+.l-header {
+    z-index: 100;
+    position: fixed;
+    padding: 0 5%;
+    width: 100%;
+    height: 60px;
+    background: #fefefe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint( tablet ) {
+    }
+    @include breakpoint( pc ) {
+        height: 80px;
+    }
+    @include breakpoint( wide ) {
+        height: 80px;
+        padding-right: 0;
+    }
+    >h1 {
+        @include breakpoint( pc ) {
+            padding-left: 0;
+        }
+    }
+   
+}

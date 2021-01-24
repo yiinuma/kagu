@@ -1,0 +1,19 @@
+.p-news {
+    z-index: 10;
+    margin: -31px 5% 0;
+    padding: 0 5% 20px;
+    background-color: #fff;
+
+    
+
+    ul {
+        margin: 0 6% 30px;
+        li {
+            list-style-type: none;
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+        }
+    }
+}
