@@ -14,6 +14,7 @@
 // ==================================================*/
 
 @import "layout/_header";
+@import "layout/_main";
 @import "layout/_footer";
  
 // /*==================================================
@@ -22,7 +23,7 @@
 
 // /* Component */
 @import "object/component/_section-titleset";
-// @import "object/component/_reservation-btn";
+@import "object/component/_button";
 // @import "object/component/_burger";
 // @import "object/component/_filter";
 // @import "object/component/_reservation";

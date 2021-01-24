@@ -1,19 +1,86 @@
 .p-news {
-    z-index: 10;
-    margin: -31px 5% 0;
     padding: 0 5% 20px;
-    background-color: #fff;
+    background-color: rgb(247, 246, 245);
 
-    
+    @include breakpoint(tablet) {
+        padding: 0 5% 100px;
+    }
+    &__inner {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        margin-top: -30px;
+        padding: 30px 20px 40px;
+        background-color: #fff;
 
-    ul {
-        margin: 0 6% 30px;
-        li {
-            list-style-type: none;
-            a {
-                color: #333;
-                text-decoration: none;
+        @include breakpoint(tablet) {
+            margin: -70px auto 0;
+            padding: 80px 5% 80px;
+            max-width: 960px;
+        }
+
+        ul {
+            margin: 0 auto;
+            padding-left: 0;
+
+            @include breakpoint(tablet) {
+                margin: 65px 2% 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 60px;
+            }
+
+
+            li {
+                margin-top: 28px;
+                list-style-type: none;
+
+                a {
+                    color: #333;
+                    text-decoration: none;
+
+                    time {
+                        @include quick(700);
+                        font-size: 1.4rem;
+
+                        span {
+                            margin-left: 17px;
+                            padding: 2px 9px 2px 9px;
+                            font-family: 'Noto Sans JP', Arial;
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                            color: #fff;
+                            background-color: rgb(36, 162, 179);
+                        }
+                    }
+
+                    p {
+                        margin: 9px 0 0;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: 0.8px;
+
+                        @include breakpoint(tablet) {
+                            // letter-spacing: 1.5px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        p {
+            margin-top: 30px;
+
+            @include breakpoint(tablet) {
+                margin-top: 60px;
+
+                .pc-none {
+                    display: none;
+                }
             }
         }
     }
+
 }

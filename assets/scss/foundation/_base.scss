@@ -18,11 +18,11 @@
 }
 
 //font
-@mixin noto-serif( $weight: "400" ) {
+@mixin noto-serif( $weight: "500" ) {
     font-family: 'Noto Serif JP', serif;
     font-weight: $weight;
 }
-@mixin quick( $weight: "400" ) {
+@mixin quick( $weight: "500" ) {
     font-family: 'Quicksand', sans-serif;
     font-weight: $weight;
 }
@@ -39,6 +39,7 @@ html {
 }
 
 body {
+    z-index: 1;
     min-width  : 320px;
     width      : 100%;
     font-family: 'Noto Sans JP', Arial;

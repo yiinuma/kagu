@@ -73,6 +73,10 @@ $btnHeight: 2px;
     }
 }
 
+// body.is-open {
+//     position: fixed;
+// }
 body.is-open {
-    position: fixed;
-}
+    overflow: hidden;
+  }
+  

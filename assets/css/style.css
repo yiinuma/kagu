@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  z-index: 1;
   min-width: 320px;
   width: 100%;
   font-family: 'Noto Sans JP', Arial;
@@ -55,6 +56,16 @@ body {
   }
 }
 
+.l-main {
+  padding-top: 60px;
+}
+
+@media (min-width: 960px) {
+  .l-main {
+    padding-top: 80px;
+  }
+}
+
 .l-footer {
   padding: 30px 0;
   text-align: center;
@@ -70,21 +81,47 @@ body {
 
 .c-section-titleset {
   text-align: center;
-  padding-top: 33px;
   font-size: 2rem;
-  font-weight: normal;
+  font-weight: 500;
   letter-spacing: 0.15em;
   line-height: 1;
   color: #333;
 }
 
+@media (min-width: 560px) {
+  .c-section-titleset {
+    font-size: 2.4rem;
+  }
+}
+
 .c-section-titleset span {
   padding-top: 13px;
-  padding-bottom: 30px;
   display: block;
   font-size: 1.4rem;
   letter-spacing: normal;
   color: #aa8f7b;
+}
+
+@media (min-width: 560px) {
+  .c-section-titleset span {
+    font-size: 1.5rem;
+  }
+}
+
+.c-button {
+  margin: 0 auto;
+  width: 220px;
+  padding: 9px 1em;
+  display: block;
+  text-align: center;
+  background: #FFF;
+  color: #292929;
+  border: solid 2px #292929;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2;
+  text-decoration: none;
 }
 
 .p-gnavi > .list {
@@ -330,33 +367,30 @@ body {
 }
 
 body.is-open {
-  position: fixed;
+  overflow: hidden;
 }
 
 .p-mainvisual .swiper-container {
-  z-index: -1;
-  padding-top: 60px;
+  margin: 0 auto;
   width: 100%;
-  height: 420px;
+  height: 360px;
+  z-index: 1;
   position: relative;
 }
 
 @media (min-width: 960px) {
   .p-mainvisual .swiper-container {
-    padding-top: 80px;
     width: 100%;
     height: 610px;
-    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
 .p-mainvisual .swiper-container .main-title {
-  z-index: 10;
   position: absolute;
   top: 25%;
   left: 5%;
   font-family: 'Noto Serif JP', serif;
-  font-weight: "400";
+  font-weight: "500";
   font-size: 2.4rem;
   line-height: 1.5;
   font-weight: normal;
@@ -376,7 +410,14 @@ body.is-open {
   }
 }
 
+.p-mainvisual .swiper-container .swiper-wrapper {
+  z-index: -1;
+  position: relative;
+}
+
 .p-mainvisual .swiper-container .swiper-wrapper img {
+  background-color: rgba(220, 214, 208, 0.7);
+  opacity: 1;
   width: 100%;
   height: 360px;
   -o-object-fit: cover;
@@ -398,7 +439,7 @@ body.is-open {
 }
 
 .p-mainvisual .swiper-container .swiper-pagination-bullet {
-  margin: 0 15px;
+  margin: 0 10px;
   width: 10px;
   height: 10px;
   background: #fff;
@@ -410,21 +451,93 @@ body.is-open {
 }
 
 .p-news {
-  z-index: 10;
-  margin: -31px 5% 0;
   padding: 0 5% 20px;
+  background-color: #f7f6f5;
+}
+
+@media (min-width: 560px) {
+  .p-news {
+    padding: 0 5% 100px;
+  }
+}
+
+.p-news__inner {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  margin-top: -30px;
+  padding: 30px 20px 40px;
   background-color: #fff;
 }
 
-.p-news ul {
-  margin: 0 6% 30px;
+@media (min-width: 560px) {
+  .p-news__inner {
+    margin: -70px auto 0;
+    padding: 80px 5% 80px;
+    max-width: 960px;
+  }
 }
 
-.p-news ul li {
+.p-news__inner ul {
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+@media (min-width: 560px) {
+  .p-news__inner ul {
+    margin: 65px 2% 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 60px;
+            column-gap: 60px;
+  }
+}
+
+.p-news__inner ul li {
+  margin-top: 28px;
   list-style-type: none;
 }
 
-.p-news ul li a {
+.p-news__inner ul li a {
   color: #333;
   text-decoration: none;
+}
+
+.p-news__inner ul li a time {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.p-news__inner ul li a time span {
+  margin-left: 17px;
+  padding: 2px 9px 2px 9px;
+  font-family: 'Noto Sans JP', Arial;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #24a2b3;
+}
+
+.p-news__inner ul li a p {
+  margin: 9px 0 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+}
+
+.p-news__inner p {
+  margin-top: 30px;
+}
+
+@media (min-width: 560px) {
+  .p-news__inner p {
+    margin-top: 60px;
+  }
+  .p-news__inner p .pc-none {
+    display: none;
+  }
 }

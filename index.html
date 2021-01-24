@@ -42,40 +42,63 @@
         </nav>
     </header>
 
-    <article class="p-mainvisual">
-        <!-- スライダーのメインコンテナの div 要素 -->
-        <div class="swiper-container">
-            <h2 class="main-title">自分らしさを<br class="pc-none">レイアウトする</h2>
-            <!-- ラッパーの（スライドを囲む） div 要素 -->
-            <div class="swiper-wrapper">
-                <picture class="swiper-slide">
-                    <source media="(min-width:560px)" srcset="assets/img/bg_hero_01.jpg">
-                    <img src="assets/img/bg_hero_01_sp.jpg" alt="">
-                </picture>
-                <picture class="swiper-slide">
-                    <source media="(min-width:560px)" srcset="assets/img/bg_hero_02.jpg">
-                    <img src="assets/img/bg_hero_02_sp.jpg" alt="">
-                </picture>
-                <picture class="swiper-slide">
-                    <source media="(min-width:560px)" srcset="assets/img/bg_hero_03.jpg">
-                    <img src="assets/img/bg_hero_03_sp.jpg" alt="">
-                </picture>
+    <main class="l-main">
+        <article class="p-mainvisual">
+            <!-- スライダーのメインコンテナの div 要素 -->
+            <div class="swiper-container">
+                <h2 class="main-title">自分らしさを<br class="pc-none">レイアウトする</h2>
+                <!-- ラッパーの（スライドを囲む） div 要素 -->
+                <div class="swiper-wrapper">
+                    <picture class="swiper-slide">
+                        <source media="(min-width:960px)" srcset="assets/img/bg_hero_01.jpg">
+                        <img src="assets/img/bg_hero_01_sp.jpg" alt="">
+                    </picture>
+                    <picture class="swiper-slide">
+                        <source media="(min-width:960px)" srcset="assets/img/bg_hero_02.jpg">
+                        <img src="assets/img/bg_hero_02_sp.jpg" alt="">
+                    </picture>
+                    <picture class="swiper-slide">
+                        <source media="(min-width:960px)" srcset="assets/img/bg_hero_03.jpg">
+                        <img src="assets/img/bg_hero_03_sp.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </article><!-- /.p-mainvisual -->
+        </article><!-- /.p-mainvisual -->
 
-    <section class="p-news">
-        <h2 class="c-section-titleset">お知らせ<span>NEWS</span></h2>
-        <ul>
-            <li>
-                <a href="#">
-                    <time>2020.01.28<span>ニュースリリース</span></time>
-                    <p>「KAGU zが2020年X月XX日<br>（月）東京・原宿にオープ</p>
-                </a>
-            </li>
-        </ul>
-    </section><!-- /.p-news -->
+        <section class="p-news">
+            <div class="p-news__inner">
+                <h2 class="c-section-titleset">お知らせ<span>NEWS</span></h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <time>2020.01.28<span>ニュースリリース</span></time>
+                            <p>「KAGU FANTASIAが2020年X月XX日<br class="pc-none">（月）東京・原宿にオープン</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time>2020.01.12<span>ニュースリリース</span></time>
+                            <p>新春キャンペーンを実施</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time>2019.12.16<span>お知らせ</span></time>
+                            <p>年末年始の営業日についてのお知らせ</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time>2019.11.09<span>ニュースリリース</span></time>
+                            <p>人気ライフスタイル雑誌『KAGUGU』との<br class="pc-none">コラボ商品が登場</p>
+                        </a>
+                    </li>
+                </ul>
+                <p><a href="#" class="c-button">お知らせ一覧へ</a></p>
+            </div><!-- /.p-news-inner -->
+        </section><!-- /.p-news -->
+    </main><!-- /.l-main -->
 
     <!-- <script src="assets/js/jquery-3.5.1.min.js"></script> -->
     <script src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
