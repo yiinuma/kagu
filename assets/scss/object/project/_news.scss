@@ -72,6 +72,7 @@
 
         p {
             margin-top: 30px;
+            text-align: center;
 
             @include breakpoint(tablet) {
                 margin-top: 60px;

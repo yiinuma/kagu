@@ -1,0 +1,56 @@
+.p-furniture {
+    margin-top: 40px;
+    padding-bottom: 40px;
+
+    @include breakpoint(tablet) {
+        margin-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    @include breakpoint(pc) {
+        margin-top: 80px;
+        padding-bottom: 80px;
+        
+    }
+
+
+    .list {
+        margin-top: 60px;
+        padding: 0;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @include breakpoint(pc) {}
+
+        .item {
+            width: 100%;
+            list-style: none;
+
+            &:nth-of-type(n+2) {
+                margin-top: 60px;
+            }
+
+            @include breakpoint(tablet) {
+                &.wide {
+                    width: 100%;
+                }
+
+                &.small {
+                    width: 45%;
+                }
+            }
+
+            @include breakpoint(pc) {
+                &.small {
+                    width: 29.2%;
+                }
+            }
+
+        }
+    }
+}
