@@ -1,0 +1,40 @@
+.p-top-other {
+    padding-top: 40px;
+    background-color: rgb(247, 246, 245);
+
+    @include breakpoint(tablet) {
+        margin-top: 60px;
+        padding-bottom: 60px;
+
+    }
+
+    @include breakpoint(pc) {
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .list {
+
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @include breakpoint(pc) {}
+
+        .item {
+            width: 100%;
+            list-style: none;
+
+            @include breakpoint(tablet) {
+                &.wide {
+                    width: 100%;
+                }
+            }
+
+            @include breakpoint(pc) {}
+        }
+
+    }
+}
