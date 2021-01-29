@@ -74,23 +74,32 @@
 
     @include breakpoint(tablet) {
         display: flex;
+    }
 
-        >img {
+    >img {
+        @include breakpoint(tablet) {
             margin-bottom: 60px;
             width: 50%;
             height: 52.6%;
+            max-height: 200px;
             object-fit: cover;
             margin-right: 5%;
+        }
 
+        @include breakpoint(pc) {
+            width: 30%;
         }
     }
 
+
     figcaption {
-        @include breakpoint(tablet) {
-            dl dt {
+
+        dl dt {
+            @include breakpoint(tablet) {
                 margin-top: 0;
             }
         }
+
 
         p {
             padding-top: 30px;

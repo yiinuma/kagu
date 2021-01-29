@@ -12,5 +12,12 @@
     font-weight: 700;
     line-height: 2;
     text-decoration: none;
-   
+
+    &.white {
+        color: #fff;
+        background: none;
+        border-color: #fff;
+
+    }
+
 }
