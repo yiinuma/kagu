@@ -5,19 +5,26 @@
     letter-spacing: 0.15em;
     line-height: 1;
     color: #333;
-    &.white{
+
+    &.white {
         color: #FFF;
+
+        span {
+            color: #FFF;
+
+        }
     }
-    
+
     @include breakpoint(tablet) {
         font-size: 2.4rem;
     }
-    
+
     span {
         padding-top: 13px;
         display: block;
         font-size: 1.4rem;
         letter-spacing: normal;
+        color: #aa8f7b;
 
         @include breakpoint(tablet) {
             font-size: 1.5rem;
